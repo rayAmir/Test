@@ -4,7 +4,7 @@
 * Teacher: Mr. Ho
 * Description: Club Fair Assignment
 */
-
+// This is test
 // Scanner and user introduction block
 import java.util.Scanner;
 class ClubFair{
