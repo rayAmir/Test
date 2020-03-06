@@ -1,0 +1,140 @@
+/*
+* Date: Janurary 14, 2020
+* Name: Rayyan Amir
+* Teacher: Mr. Ho
+* Description: Club Fair Assignment
+*/
+
+// Scanner and user introduction block
+import java.util.Scanner;
+class ClubFair{
+  public static void main(String[] args){
+    Scanner myScanner = new Scanner(System.in);
+    System.out.println("Welcome to Club Finder; Answer each question to find your best matches");
+    System.out.println("Note: Write the keywords of each question in the input box to continue");
+    System.out.println("Q1: Do you like outdoors or indoors?");
+    String option = myScanner.nextLine();
+    
+// Condition for whole outdoors scenerio block      
+// Condition for whole outdoors activities Scenerio block   
+    if (option.equals("outdoors"))
+    { 
+      System.out.println("Q2: Do you like participating in activities or like being around nature?");
+      String reader = myScanner.nextLine();
+      
+      if (reader.equals("activities")) 
+      {
+      System.out.println("Q3: Are you active or non-active?");
+      String choice= myScanner.nextLine();
+      
+      if (choice.equals("active"))
+      {
+      String club5 = "Soccer Club";
+      String club6 = "Tennis Club";
+      System.out.println("You may like " + club5 + " " + "or " + club6);
+      }
+      else if (choice.equals("non-active"))
+      {
+      String club7 = "DragonBoat Club";
+      String club8 = "Cloudgazing Club";
+      System.out.println("You may like " + club7 + " " + "or " + club8);
+      }
+      else if (!(choice.equals("active")) || !(choice.equals("non-active")))
+      {
+      System.out.println("Sorry you did not type in the right keyword"); 
+      }
+      }
+// Conditions for outdoors nature scenerio block
+      else if (reader.equals("nature"))
+      { 
+      System.out.println("Q3: Do you like to admire animals or the environment");
+      String decision = myScanner.nextLine();
+      
+      if (decision.equals("animals"))
+      {
+      String club3 = "Nature Club";
+      String club4 = "Birdwatch Club";
+      System.out.println("You may like " + club3 + " " + "or " + club4);
+      }
+      else if (decision.equals("environment"))
+      {
+      String club1 = "Eco Club";
+      String club2 = "Photography Club";
+      System.out.println("You may like " + club1 + " " + "or " + club2);
+      }
+      else if (!(decision.equals("animals")) || !(decision.equals("environment")))
+      {
+      System.out.println("Sorry you did not type in the right keyword"); 
+      }
+      }
+      else if (!(reader.equals("nature")) || !(reader.equals("activities")))
+      {
+      System.out.println("Sorry you did not type in the right keyword"); 
+      }
+    }     
+
+// Conditions for whole indoor Scenerio
+// Conditions set for indoor math Scenerio
+    else if (option.equals("indoors"))
+    { 
+      System.out.println("Q2: Do you like math or art?");
+      String reader2 = myScanner.nextLine(); 
+      
+      if (reader2.equals("math")) 
+      {
+      System.out.println("Q3: Do you like conducting experiements or dealing with numbers?");
+      String choice2 =myScanner.nextLine();
+     
+      if (choice2.equals("experiements"))
+      {
+      String club9 = "Physics Club";
+      String club10 = "Chemistry Club";
+      System.out.println("You may like " + club9 + " " + "or " + club10);
+      }
+      else if (choice2.equals("numbers"))
+      {
+      String club11 = "Math Club";
+      String club12 = "Computer Club";
+      System.out.println("You may like " + club11 + " " + "or " + club12);
+      }
+      else if (!(choice2.equals("experiements")) || !(choice2.equals("numbers")))
+      {
+      System.out.println("Sorry you did not type in the right keyword"); 
+      }
+      }
+      
+// Conditions set For Indoors Art Scenerio
+      else if (reader2.equals("art"))
+      { 
+      System.out.println("Q3: Do you like to dance or draw");
+      String decision2 = myScanner.nextLine();
+   
+      if (decision2.equals("draw"))
+      {
+      String club13 = "Art Club";
+      String club14 = "Caligraphy Club";
+      System.out.println("You may like " + club13 + " " + "or " + club14);
+      }
+      else if (decision2.equals("dance"))
+      {
+      String club15 = "Drama Club";
+      String club16 = "Dance Club";
+      System.out.println("You may like " + club15 + " " + "or " + club16);
+      }
+      else if (!(decision2.equals("draw")) || !(decision2.equals("dance")))
+      {
+      System.out.println("Sorry you did not type in the right keyword"); 
+      }
+      else if (!(reader2.equals("math")) || !(reader2.equals("art")))
+      {
+      System.out.println("Sorry you did not type in the right keyword"); 
+      }
+      }
+   }
+      // Condition notifying users if their input is invalid
+      else if (!(option.equals("outdoors")) || !(option.equals("indoors")))
+      {
+      System.out.println("Sorry you did not type in the right keyword"); 
+      }  
+  }
+}
